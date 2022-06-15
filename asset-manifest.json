@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/kalbo/static/css/main.872b5001.css",
+    "main.js": "/kalbo/static/js/main.d2fcc853.js",
+    "static/js/787.1659cdfa.chunk.js": "/kalbo/static/js/787.1659cdfa.chunk.js",
+    "static/media/SSI_0898.jpg": "/kalbo/static/media/SSI_0898.e49c90fdd2b9391a1cab.jpg",
+    "static/media/pexels-magda-ehlers-1319515.jpg": "/kalbo/static/media/pexels-magda-ehlers-1319515.a1ae7d627ce965a4e67d.jpg",
+    "static/media/pexels-iurii-ivashchenko-3498323.jpg": "/kalbo/static/media/pexels-iurii-ivashchenko-3498323.7a6a199f72f05cf56ab5.jpg",
+    "static/media/Kalbo Adventures Karuru Experience 2021-193.jpg": "/kalbo/static/media/Kalbo Adventures Karuru Experience 2021-193.d1703f2101fb6a69e67c.jpg",
+    "static/media/pexels-charl-durand-6436445.jpg": "/kalbo/static/media/pexels-charl-durand-6436445.3da0e51fe9d3e375744b.jpg",
+    "static/media/Kalbo Adventures Karuru Experience 2021-31.jpg": "/kalbo/static/media/Kalbo Adventures Karuru Experience 2021-31.eda5185b68986d54aafb.jpg",
+    "static/media/pexels-pixabay-70080.jpg": "/kalbo/static/media/pexels-pixabay-70080.8f608c03efac3b635aa5.jpg",
+    "static/media/pexels-pixabay-247376.jpg": "/kalbo/static/media/pexels-pixabay-247376.fe6cc68e90cb3b4a6ba7.jpg",
+    "static/media/logo.PNG": "/kalbo/static/media/logo.d1f63803c9e9cdbd980a.PNG",
+    "index.html": "/kalbo/index.html",
+    "main.872b5001.css.map": "/kalbo/static/css/main.872b5001.css.map",
+    "main.d2fcc853.js.map": "/kalbo/static/js/main.d2fcc853.js.map",
+    "787.1659cdfa.chunk.js.map": "/kalbo/static/js/787.1659cdfa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.872b5001.css",
+    "static/js/main.d2fcc853.js"
+  ]
+}
