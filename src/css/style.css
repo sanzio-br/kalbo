@@ -8235,11 +8235,11 @@ textarea.textarea-lg {
 }
 
 .footer-contacts a, .footer-contacts a:focus, .footer-contacts a:active {
-	color: #151515;
+	color: #000000;
 }
 
 .footer-contacts a:hover {
-	color: var(--red);
+	color:#000000;
 }
 
 .footer-contacts li + li {
@@ -8252,6 +8252,7 @@ textarea.textarea-lg {
 
 .footer-social-list-2 .icon {
 	font-size: 16px;
+	color: #000000;
 }
 
 .footer-social-list-2 a, .footer-social-list-2 a:focus, .footer-social-list-2 a:active {
@@ -8323,7 +8324,8 @@ textarea.textarea-lg {
 
 .footer-corporate {
 	text-align: center;
-	background: #162e44;
+	background: var(--red);
+	color: #ffffff;
 }
 
 .footer-corporate h6 {
@@ -8362,7 +8364,7 @@ textarea.textarea-lg {
 }
 
 .footer-corporate .list-marked a:hover {
-	color: var(--red);
+	color: #000;
 }
 
 .footer-corporate .button {
@@ -8430,7 +8432,7 @@ textarea.textarea-lg {
 }
 
 .footer-corporate-2 .post-minimal-2-title a, .footer-corporate-2 .post-minimal-2-title a:focus, .footer-corporate-2 .post-minimal-2-title a:active {
-	color: var(--red);
+	color: #000000;
 }
 
 .footer-corporate-2 .post-minimal-2-title a:hover {
@@ -8586,15 +8588,15 @@ textarea.textarea-lg {
 }
 
 .footer-corporate-inset .post-minimal-2 a {
-	color: var(--red);
+	color: #ffffff;
 }
 
 .footer-corporate-inset .post-minimal-2 a:hover {
-	color: var(--red);
+	color: #000000;
 }
 
 .footer-corporate-inset .list-marked li:before {
-	background: var(--red);
+	background: #ffffff;
 }
 
 /**
@@ -12225,7 +12227,7 @@ html [class*='section-'].section-top-0 {
 .footer-corporate.context-dark .footer-corporate-bottom-panel a:active,
 .footer-corporate.bg-gray-dark .footer-corporate-bottom-panel a:active,
 .footer-corporate.bg-primary .footer-corporate-bottom-panel a:active {
-	color: inherit;
+	color: #000000;
 }
 
 .footer-minimal.context-dark .footer-minimal-bottom-panel a:hover, .footer-minimal.bg-gray-dark .footer-minimal-bottom-panel a:hover, .footer-minimal.bg-primary .footer-minimal-bottom-panel a:hover,
@@ -12235,7 +12237,7 @@ html [class*='section-'].section-top-0 {
 .footer-corporate.context-dark .footer-corporate-bottom-panel a:hover,
 .footer-corporate.bg-gray-dark .footer-corporate-bottom-panel a:hover,
 .footer-corporate.bg-primary .footer-corporate-bottom-panel a:hover {
-	color: var(--red);
+	color:#000000;
 }
 
 .footer-minimal.context-dark .rights, .footer-minimal.bg-gray-dark .rights, .footer-minimal.bg-primary .rights, .footer-corporate.context-dark .rights, .footer-corporate.bg-gray-dark .rights, .footer-corporate.bg-primary .rights {
@@ -12252,7 +12254,7 @@ html [class*='section-'].section-top-0 {
 }
 
 .footer-corporate-2.context-dark .footer-contacts .icon, .footer-corporate-2.bg-gray-dark .footer-contacts .icon, .footer-corporate-2.bg-primary .footer-contacts .icon {
-	color: var(--red);
+	color: #0000;
 }
 
 .footer-corporate-2.context-dark .button-gray-31.button-ujarak::before, .footer-corporate-2.bg-gray-dark .button-gray-31.button-ujarak::before, .footer-corporate-2.bg-primary .button-gray-31.button-ujarak::before {

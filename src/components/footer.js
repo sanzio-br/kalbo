@@ -6,7 +6,8 @@ import { IoLogoWhatsapp } from "react-icons/io"
 import { Link } from "react-router-dom";
 export default function Footer() {
     return (
-        <footer className="section footer-corporate container " style={{ 'backgroundColor': 'var(--grey)' }} >
+        <footer className="section footer-corporate container " style={{ 'backgroundColor': 'var(--red)',
+        'color':'#ffffff' }} >
             <div className="footer-corporate-inset" data-aos="fade-up" >
                 <div className="container">
                     <div className="row row-40 justify-content-lg-between">
@@ -119,8 +120,8 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer-corporate-bottom-panel" style={{
-                'backgroundColor': 'var(--gray)',
-                'color': '#fff'
+                'backgroundColor': 'var(--red)',
+                'color': '#ffffff'
             }}>
                 <div className="container">
                     <div className="row justfy-content-xl-space-berween row-10 align-items-md-center2">
