@@ -1,0 +1,16 @@
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+}
+.form > label{
+    font-weight: 500;
+    color: var(--red);
+}
+.form > input{
+    padding: .5em;
+    font-size: 1em;
+    width: fit-content;
+}

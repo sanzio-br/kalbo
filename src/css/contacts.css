@@ -1,0 +1,79 @@
+.box-contacts {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 310px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+	transition: all .3s ease;
+	background-color:var(--grey);
+}
+
+.box-contacts-body {
+	max-width: 250px;
+}
+
+.box-contacts-icon {
+	font-size: 60px;
+	line-height: 1;
+	color: var(--red);
+}
+
+.box-contacts-decor {
+	margin: 30px auto;
+	height: 2px;
+	max-width: 100px;
+	background: var(--red);
+	transition: all .3s ease-in-out;
+}
+
+.box-contacts-link {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: .025em;
+	color:#fff;
+}
+
+.box-contacts-link a, .box-contacts-link a:focus, .box-contacts-link a:active {
+	color: inherit;
+}
+
+.box-contacts-link a:hover {
+	color: var(--red);
+}
+
+@media (min-width: 992px) {
+	.desktop .box-contacts {
+		box-shadow: none;
+		border: 1px solid #e1e1e1;
+	}
+	.desktop .box-contacts-decor {
+		margin-top: 17px;
+		margin-bottom: 17px;
+		width: 0;
+	}
+	.desktop .box-contacts:hover {
+		border-color: transparent;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+	}
+	.desktop .box-contacts:hover .box-contacts-decor {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		width: 100%;
+		transition: margin .3s ease, width .4s ease-in-out;
+	}
+}
+
+.box-contacts-icon + .box-contacts-link {
+	margin-top: 40px;
+}
+
+* + .box-contacts-link {
+	margin-top: 0;
+}
+
+.ie-edge .box-contacts,
+.ie-10 .box-contacts,
+.ie-11 .box-contacts {
+	height: 310px;
+}

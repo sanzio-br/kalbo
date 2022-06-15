@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+	--red:#e24a1b;
+	--grey:#424242;
+	--gray:#333333;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body{
+  background-color: #f1f1f1;
+}
+
+ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+.headers{
+    color:var(--red);
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem) !important;
+    margin: 1em auto;
+}
+.headers::after{
+    display: block;
+    content: '';
+    margin: auto;
+    width: 20%;
+    height: 2px;
+    background-color: var(--red);
+}
+
+/* hero section  */
+
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20em,1fr));
+    grid-gap: 15px;
+    padding: 10px;
+    margin: auto;
+}
+
+/* booking button  */
+
+.bookbtn{
+  display: flex;
+  border: none;
+  background: var(--red);
+  color: #ffff;
+  padding:7px 15px;
+  border-radius: 2em;
+  margin-top: .5em ;
+  width: fit-content;
+  align-self: flex-end;
+}

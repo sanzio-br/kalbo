@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import About from "./components/aboutpage/about";
+import Booking from "./components/booking/booking";
+import BlogPage from "./components/blogspage/Blogspage";
+import Contactpage from "./components/Contactspage/Contactpage";
+import Events from "./components/eventspage/EventsPage";
+import Footer from "./components/footer";
+import Home from "./components/mainpage/Home";
+import Custom from "./components/custom-safaris/custom";
+import BookingInfo from "./components/bookinginfo";
+import Navbar from "./components/navbar";
+import AOS from 'aos'
+import Foot from "./components/foot";
 function App() {
+  AOS.init();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route exact path="/kalbo" element={<Home />} />
+        <Route exact path="/kalbo/about" element={<About />} />
+        <Route exact path="/kalbo/booking" element={<Booking />} />
+        <Route exact path="/kalbo/safari-packages" element={<Events />} />
+        <Route
+          exact
+          path="/kalbo/safari-packages/:id"
+          element={<BookingInfo />}
+        />
+        <Route exact path="/kalbo/contact-us" element={<Contactpage />} />
+        <Route exact path="/kalbo/blogs" element={<BlogPage />} />
+        <Route exact path="/kalbo/custom-safaris" element={<Custom />} />
+      </Routes>
+      <Footer />
+      {/* <Foot/> */}
     </div>
   );
 }
