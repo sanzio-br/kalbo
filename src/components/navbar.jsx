@@ -113,6 +113,15 @@ const Navbar= () => {
                 <a
                   className="nav-link active"
                   aria-current="page"
+                  href="/kalbo/booking"
+                >
+                  Online Booking
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
                   href="/kalbo/contact-us"
                 >
                   Contacts

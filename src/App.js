@@ -10,8 +10,10 @@ import Home from "./components/mainpage/Home";
 import Custom from "./components/custom-safaris/custom";
 import BookingInfo from "./components/bookinginfo";
 import Navbar from "./components/navbar";
+import Hire from './components/carhire/Hire'
 import AOS from 'aos'
 import Foot from "./components/foot";
+import Footee from "./components/footer";
 function App() {
   AOS.init();
   return (
@@ -28,10 +30,12 @@ function App() {
           element={<BookingInfo />}
         />
         <Route exact path="/kalbo/contact-us" element={<Contactpage />} />
+        <Route exact path="/kalbo/hire-ride" element={<Hire />} />
         <Route exact path="/kalbo/blogs" element={<BlogPage />} />
         <Route exact path="/kalbo/custom-safaris" element={<Custom />} />
       </Routes>
-      <Footer />
+      <Footee/>
+      {/* <Footer /> */}
       {/* <Foot/> */}
     </div>
   );

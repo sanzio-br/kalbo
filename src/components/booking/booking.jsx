@@ -10,7 +10,10 @@ const Booking = () => {
         email: '',
         date: date,
         name: '',
-        phone: phone
+        phone: phone,
+        adults:'',
+        duration:'',
+        children:''
 
     })
     const handleChange = (event) => {
@@ -18,6 +21,7 @@ const Booking = () => {
         const value = event.target.value
         setUserData({ ...userData, [event.target.name]: value });
     }
+    console.log(userData)
     return (
         <div className="container mt-0">
             <div className="form">
