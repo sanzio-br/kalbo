@@ -5,15 +5,13 @@ import Booking from "./components/booking/booking";
 import BlogPage from "./components/blogspage/Blogspage";
 import Contactpage from "./components/Contactspage/Contactpage";
 import Events from "./components/eventspage/EventsPage";
-import Footer from "./components/footer";
 import Home from "./components/mainpage/Home";
 import Custom from "./components/custom-safaris/custom";
 import BookingInfo from "./components/bookinginfo";
 import Navbar from "./components/navbar";
 import Hire from './components/carhire/Hire'
 import AOS from 'aos'
-import Foot from "./components/foot";
-import Footee from "./components/footer";
+import Footer from "./components/footer";
 function App() {
   AOS.init();
   return (
@@ -34,9 +32,7 @@ function App() {
         <Route exact path="/kalbo/blogs" element={<BlogPage />} />
         <Route exact path="/kalbo/custom-safaris" element={<Custom />} />
       </Routes>
-      <Footee/>
-      {/* <Footer /> */}
-      {/* <Foot/> */}
+      <Footer/>
     </div>
   );
 }

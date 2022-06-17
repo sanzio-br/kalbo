@@ -3,6 +3,9 @@ nav{
   background-color: #ffffff ;
   align-items: center;
   color: var(--red);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.69);
+-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.69);
+-moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.69);
 }
 .navbar > .container-fluid > .navbar-brand {
   color: var(--red);

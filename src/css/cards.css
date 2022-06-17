@@ -1,4 +1,3 @@
-
 .boxs {
     position: relative;
     margin-bottom: 30px;
@@ -12,7 +11,16 @@
     border-radius: 3px;
     text-align: center;
     align-items: center;
+    transition: .2s;
 }
+
+.boxs:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
 .project_widget .pw_img {
     position: relative;
     overflow: hidden
@@ -69,14 +77,17 @@
 .project_widget .pw_content .pw_header small {
     font-size: 12px
 }
-.project_widget .pw_content .pw_header > span{
+
+.project_widget .pw_content .pw_header>span {
     color: var(--red);
     font-size: 5em;
 }
-.project_widget .pw_content .pw_header > p{
+
+.project_widget .pw_content .pw_header>p {
     color: var(--red);
     font-weight: 600;
 }
+
 .project_widget .pw_content .pw_meta {
     padding: 20px
 }
