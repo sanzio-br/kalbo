@@ -76,3 +76,8 @@
 
 
 /* featured tours end  */
+
+
+.book{
+    background-color: var(--red) !important;
+}

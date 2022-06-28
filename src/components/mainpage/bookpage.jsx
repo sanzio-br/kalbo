@@ -1,7 +1,7 @@
 
 export default function Bookpage() {
     return (
-      <section className="section bg-default text-center offset-top-50" style={{'color':'#000'}}>
+      <section className="section bg-default text-center offset-top-50 book" style={{'color':'#000'}}>
         <div className="parallax-container">
           <div className="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
             <div className="container">

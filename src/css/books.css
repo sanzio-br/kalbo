@@ -1,0 +1,27 @@
+.product-details {
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+	padding: 30px;
+	height: 100%;
+	float: left;
+
+
+}
+.number{
+	font-size: .7em;
+}
+.id{
+	color: grey;
+}
+.product-details > h4{
+	font-size: 1.5em;
+}
+.price{
+	color: var(--red);
+	font-size: 1.5em;
+}
+.det{
+	font-size:1.2em;
+	color: grey;
+}

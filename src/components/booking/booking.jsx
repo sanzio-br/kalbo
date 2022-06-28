@@ -4,7 +4,7 @@ import PhoneInput from 'react-phone-number-input'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 const Booking = () => {
-    const [phone, setPhone] = useState()
+    const [phone, setPhone] = useState(null)
     const [date, setDate] = useState(new Date());
     let [userData, setUserData] = useState({
         email: '',
@@ -13,7 +13,8 @@ const Booking = () => {
         phone: phone,
         adults:'',
         duration:'',
-        children:''
+        children:'',
+        description:'',
 
     })
     const handleChange = (event) => {
@@ -39,7 +40,7 @@ const Booking = () => {
                     <PhoneInput
                         placeholder="Enter phone number"
                         value={phone}
-                        onChange={setPhone} />
+                        onChange={phone=> setPhone(phone)} />
                 </div>
                 <div className="inputs">
                     <label>Number of Adults</label>
@@ -69,26 +70,26 @@ const Booking = () => {
                     <fieldset>
                         <legend>Preferred mode of transport</legend>
                         <label>
-                            <input type="radio" name="mode" value="create" />
+                            <input type="radio" name="mode" value="sgr"  onChange={handleChange}/>
                             <i>Standard gauge railway (SGR)</i>
                         </label>
                         <label>
-                            <input type="radio" name="mode" value="create" />
+                            <input type="radio" name="mode" value="flight" onChange={handleChange}/>
                             <i>Flight</i>
                         </label>
                         <label>
-                            <input type="radio" name="mode" value="create" />
+                            <input type="radio" name="mode" value="mini-van" onChange={handleChange}/>
                             <i>Safari min-Van</i>
                         </label>
                         <label>
-                            <input type="radio" name="mode" value="create" />
+                            <input type="radio" name="mode" value="landcruiser" onChange={handleChange}/>
                             <i>Safari LandCruiser</i>
                         </label>
                     </fieldset>
                 </div>
                 <div className="inputs">
                     <label>More description</label>
-                    <textarea name="description" id="" ></textarea>
+                    <textarea name="description" id="" onChange={handleChange}></textarea>
                 </div>
                 <button>submit</button>
             </div>

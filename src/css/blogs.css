@@ -2,10 +2,6 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
-/* .gray-bg {
-    background-color: var(--gray);
-} */
-/* Blog 
 ---------------------*/
 .blog-grid {
   box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
@@ -417,3 +413,6 @@ img {
     transform: rotate(45deg);
 }
 
+.underline{
+  border-bottom: 1px dashed #ddd;
+}

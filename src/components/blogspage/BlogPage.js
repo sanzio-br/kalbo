@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { getDocs, collection } from "firebase/firestore";
-import { db } from "../../firebase-config";
+import React, { useEffect} from "react";
+import { useSelector, useDispatch } from 'react-redux'
+import { getBlogs } from '../../redux/features/blogsfeatures'
 import { Link } from 'react-scroll';
 import PostComment from "./comments";
 import logo from '../../images/logo.PNG'
 function Blog() {
-  const [postLists, setPostList] = useState([]);
-  const postsCollectionRef = collection(db, "posts");
-  useEffect(() => {
-    const getPosts = async () => {
-      const data = await getDocs(postsCollectionRef);
-      setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-
-    getPosts();
-  }, []);
+  const dispatch = useDispatch();
+    const userListState = useSelector((store)=>{
+        return store['blogs']
+    })
+    useEffect(()=>{
+        dispatch(getBlogs())
+    },[dispatch])
+    const {loading, blogs, errorMessage} = userListState;
   return (
     <div className="blog-single gray-bg">
       <div className="container">
         <div className="row align-items-start">
           <div className="col-lg-8 m-15px-tb">
-            {postLists.map(({ title, postText, author, id, url }) => {
+            {blogs.map(({ title, postText, author, id, url }) => {
               return (
                 <article className="article" id={`${id}`} data-aos="fade-up" key={id}>
                   <div className="article-img">
@@ -51,7 +49,7 @@ function Blog() {
                 <h3>Latest Post</h3>
               </div>
               <div className="widget-body">
-                {postLists.map(({ title,id ,url}) => {
+                {blogs.map(({ title,id ,url}) => {
                   return (
                     <div className="latest-post-aside media" key={id}>
                       <div className="lpa-left media-body">

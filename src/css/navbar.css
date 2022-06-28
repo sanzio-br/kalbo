@@ -27,10 +27,12 @@ nav{
 }
 .topbar{
   margin: 0 auto;
-  background-color: var(--gray);
-  color: #000;
+  background-color: var(--red);
+  color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  padding: 20px 3px;
   justify-content: space-between;
 }
 .topbar > .left > a,
@@ -40,7 +42,7 @@ nav{
 }
 .topbar > .left > a:hover,
 .topbar > .right > a:hover{
-  color: var(--red);
+  color: #000;
 }
 .topbar > .left  > span,
 .topbar > .right > span{

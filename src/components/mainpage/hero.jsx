@@ -1,5 +1,6 @@
-import img1 from "../../images/Kalbo Adventures Karuru Experience 2021-31.jpg";
-import img2 from "../../images/Kalbo Adventures Karuru Experience 2021-193.jpg";
+import img1 from "../../images/DSC_0861.jpg";
+import img4 from "../../images/IMG_0149.jpg";
+import img5 from "../../images/mara-112.jpg"
 const Hero = () => {
   return (
       <div className="hero">
@@ -35,10 +36,10 @@ const Hero = () => {
           <img src={img1} className="d-block w-100" alt="" />
         </div>
         <div className="carousel-item">
-          <img src={img2} className="d-block w-100" alt="" />
+          <img src={img4} className="d-block w-100" alt="" />
         </div>
         <div className="carousel-item">
-          <img src={img1} className="d-block w-100" alt="" />
+          <img src={img5} className="d-block w-100" alt="" />
         </div>
       </div>
       <button

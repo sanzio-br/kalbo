@@ -33,12 +33,7 @@ const Choise = () => {
   ];
   return (
     <div className="choise">
-      <h1 className="h-2 headers">Why People Choose Us</h1>
-      <span>
-        We at Kalbo adventures are determined to give you the best experience in
-        our trip with professionals. Your happiness and satisfaction is our
-        priority.
-      </span>
+      <h1 className="h-2 headers mt-2">Why People Choose Us</h1>
       <div className="container">
         <div className="row clearfix">
           {data.map(

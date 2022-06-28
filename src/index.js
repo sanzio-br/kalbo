@@ -6,7 +6,8 @@ import '../node_modules/react-bootstrap/dist/react-bootstrap'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import { BrowserRouter } from 'react-router-dom';
-
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 // all custom css 
 
@@ -21,12 +22,16 @@ import './css/blogs.css'
 import './css/cards.css'
 import './css/form.css'
 import './css/foot.css'
+import './css/books.css'
+import './css/package.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Provider store={store}>
     <App />
+    </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

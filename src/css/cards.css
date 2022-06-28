@@ -15,7 +15,7 @@
 }
 
 .boxs:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -71,7 +71,8 @@
 
 .project_widget .pw_content .pw_header h6 {
     font-size: 16px;
-    margin: 0
+    margin: 0;
+    color:var(--red);
 }
 
 .project_widget .pw_content .pw_header small {
@@ -91,12 +92,23 @@
 .project_widget .pw_content .pw_meta {
     padding: 20px
 }
-
+.card-icon{
+    color: var(--red);
+    font-size: 1.5em;
+    margin: .2em .5em;
+}
 .project_widget .pw_content .pw_meta small,
 .project_widget .pw_content .pw_meta span {
     display: block
 }
 
 .project_widget .pw_content .pw_meta span {
-    font-weight: 500
+    font-weight: 500;
+    color:var(--red);
+}
+.buy--btn{
+    color: var(--red);
+}
+.buy--btn:hover{
+     transform: scaleX(1.1);
 }

@@ -6,7 +6,7 @@ const Navbar= () => {
     <>
       <div className="topbar container">
         <div className="left">
-          <a href="mailto:kalboadventure@gmail.com">kalboadventure@gmail.com</a> <span>|</span>
+          <a href="mailto:kalboadventures2019@gmail.com">kalboadventures2019@gmail.com</a> <span>|</span>
           <a href="tel:+254720126177">+254720126177</a>
         </div>
         <div className="right">
