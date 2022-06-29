@@ -1,7 +1,6 @@
-import img from "../../images/Kalbo Adventures Karuru Experience 2021-193.jpg";
 import Carousel from "react-bootstrap/Carousel";
 import {IoMdPhotos} from 'react-icons/io'
-const Photos = () => {
+const Photos = ({img}) => {
   return (
       <div className="article-img">
           <h5 className="details-header text-start">

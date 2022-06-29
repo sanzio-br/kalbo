@@ -1,4 +1,4 @@
-import img1 from "../../images/DSC_0861.jpg";
+import img1 from "../../images/IMG_0146.jpg";
 import img4 from "../../images/IMG_0149.jpg";
 import img5 from "../../images/mara-112.jpg"
 const Hero = () => {

@@ -1,4 +1,4 @@
-const Details = () => {
+const Details = ({inclusives, exclusives, location}) => {
   return (
     <div>
       <h5 className="details-header center">Details</h5>
@@ -15,7 +15,7 @@ const Details = () => {
             data-aos="fade-down-right "
           >
             <ul className="text-start">
-              <li>JKIA</li>
+              <li>{location}</li>
             </ul>
           </div>
         </div>
@@ -30,11 +30,13 @@ const Details = () => {
           </div>
           <div className="col-lg-6 text-center wow " data-aos="fade-down-right">
             <ul className="text-start price-list-inclusive">
-              <li>Air fares</li>
-              <li>3 Nights Hotel Accomodation</li>
-              <li>Tour Guide</li>
-              <li>Entrance Fees</li>
-              <li>All transportation in destination location</li>
+              {
+                inclusives && inclusives.map(({listItem,id})=>{
+                  return(
+                    <li key={id}>{listItem}</li>
+                  )
+                })
+              }
             </ul>
           </div>
         </div>
@@ -49,12 +51,13 @@ const Details = () => {
           </div>
           <div className="col-lg-6 text-center wow " data-aos="fade-down-right">
             <ul className="text-start price-list-exclusive">
-              <li>All transportation in destination location</li>
-              <li>All transportation in destination location</li>
-              <li>All transportation in destination location</li>
-              <li>All transportation in destination location</li>
-              <li>All transportation in destination location</li>
-              <li>All transportation in destination location</li>
+            {
+                exclusives  && exclusives.map(({listItem,id})=>{
+                  return(
+                    <li key={id}>{listItem}</li>
+                  )
+                })
+              }
             </ul>
           </div>
         </div>

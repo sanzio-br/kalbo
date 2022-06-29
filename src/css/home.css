@@ -81,3 +81,10 @@
 .book{
     background-color: var(--red) !important;
 }
+
+iframe{
+    display: flex;
+    flex-flow: column;
+    height: 100%
+}
+

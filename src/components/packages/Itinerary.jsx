@@ -1,29 +1,22 @@
-import React from 'react'
+import { Description } from "@mui/icons-material";
+import React from "react";
 
-const Itinerary = () => {
+const Itinerary = ({ itinerary }) => {
   return (
-    <div className='text-start'>
-        <h5 className='details-header'>Itinerary</h5>
-        <div className="day-details">
-            <h6 className='day-header'>
-                <span>Day {1} : </span>
-                <span>Nairobi depature</span>
+    <div className="text-start">
+      <h5 className="details-header">Itinerary</h5>
+      {itinerary && itinerary.map(({ heading, description }) => {
+        return (
+          <div className="day-details">
+            <h6 className="day-header">
+              <span>{heading}</span>
             </h6>
-            <p>
-            Fly from Daresalaam  International airport or Arusha airport to Serengeti National Park/SeroneraAirstrip. Arrive just before the sun sets over the vast Serengeti Plains. Dinner and overnight: Serengeti Matawi Camp.
-            </p>
-        </div>
-        <div className="day-details">
-            <h6 className='day-header'>
-                <span>Day {1} : </span>
-                <span>Nairobi depature</span>
-            </h6>
-            <p>
-            Fly from Daresalaam  International airport or Arusha airport to Serengeti National Park/SeroneraAirstrip. Arrive just before the sun sets over the vast Serengeti Plains. Dinner and overnight: Serengeti Matawi Camp.
-            </p>
-        </div>
+            <p>{description}</p>
+          </div>
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default Itinerary
+export default Itinerary;

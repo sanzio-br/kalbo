@@ -30,7 +30,7 @@ const accordion =[
         body:"We welcome travelers from all over the world. Whether you're a solo traveller, family, couple or friends travelling together; group travel is the way to go! See first-hand feedback from clients who have travelled with us.",
     },
     {
-        id:6,
+        id:7,
         title:"Why Choose Group Travel",
         body:"Group travel is one of the best ways to see the world. Not only is it a great way to meet new people from different backgrounds, it offers amazing value thanks to all of the travel details being taken care of by our team. All you need to do is hop on the coach and be ready to explore!",
     },

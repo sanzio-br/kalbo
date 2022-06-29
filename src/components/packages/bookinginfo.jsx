@@ -1,15 +1,15 @@
 import { useSelector, useDispatch } from "react-redux";
 import { getEvents } from "../../redux/features/eventsfeature";
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Crumbs from "./crumbs";
 import BookButton from "./BookBtn";
 import Details from "./details";
 import Photos from "./photos";
 import Itinerary from "./Itinerary";
-import {AiOutlineCalendar} from 'react-icons/ai'
-import {WiDaySunny} from 'react-icons/wi'
-import {MdOutlineNightsStay} from 'react-icons/md'
+import { AiOutlineCalendar } from "react-icons/ai";
+import { WiDaySunny } from "react-icons/wi";
+import { BsPeopleFill } from "react-icons/bs";
 import Faq from "./Faq";
 export default function BookingInfo(props) {
   const [postContent, setPostContent] = useState({});
@@ -22,6 +22,7 @@ export default function BookingInfo(props) {
     dispatch(getEvents());
   }, [dispatch]);
   const { loading, events, errorMessage } = eventsListState;
+  console.log(loading, events, errorMessage);
   useEffect(() => {
     for (var i = 0; i < events.length; i++) {
       var post = events[i];
@@ -31,13 +32,13 @@ export default function BookingInfo(props) {
       }
     }
   }, []);
-  const { url, description, title, price, numOfDays, destination , date} =
+  let { url, title, packageData, itinerary, inclusives, exclusives } =
     postContent;
-  console.log(postContent);
+
   return (
-    <section className="section section-sm section-first bg-default text-md-left container mt-0">
+    <section className="section section-sm section-first bg-default text-md-left">
       <div className="container mt-0">
-        <Crumbs title={postContent.title} />
+        <Crumbs title={title} />
         <div className="booking m-2">
           <div className="row row-50 align-items-center justify-content-center justify-content-xl-between">
             <div className="col-lg-6 wow " data-aos="fade-down-left">
@@ -53,23 +54,25 @@ export default function BookingInfo(props) {
                 <h4>{title}</h4>
                 <span className="id number">{id}</span>
                 <div className="days-details">
-                <span>
-                          <AiOutlineCalendar className="card-icon"/>
-                          {date}
-                        </span>
-                        <span>
-                          <WiDaySunny className="card-icon"/>
-                          {2}
-                          <MdOutlineNightsStay className="card-icon"/>
-                          {1}
-                        </span>
+                  <span>
+                    <AiOutlineCalendar className="card-icon" />
+                    {packageData ? `${packageData.startDate} to ${packageData.endDate}`: ""}
+                  </span>
+                  <span>
+                    <WiDaySunny className="card-icon" />
+                    {packageData ? packageData.days : ""}
+                    <BsPeopleFill className="card-icon" />
+                    {packageData ? packageData.people : ""}
+                  </span>
                 </div>
                 <div className="details">
                   <span>Description</span>
-                  <p>
-                  This is a luxurious package special for people with less time to spend in the wild safari features the famous Serengeti National park in the Central part of the park. With the fly-in-fly-out safari travel in custom-designed 4×4 safari vehicles with open roofs for game viewing.
-                    </p>
-                    <BookButton title={title} price={price} destination={destination}/>
+                  <p>{packageData ? packageData.description : ""}</p>
+                  <BookButton
+                    title={title}
+                    price={packageData ? packageData.price : ""}
+                    destination={packageData ? packageData.destination : ""}
+                  />
                 </div>
               </div>
             </div>
@@ -79,14 +82,18 @@ export default function BookingInfo(props) {
           <div className="container">
             <div className="row align-items-start">
               <div className="col-lg-8 m-15px-tb">
-              <div className="underline mt-5"></div>
-                <Details />
                 <div className="underline mt-5"></div>
-                <Photos />
+                <Details
+                  inclusives={inclusives}
+                  exclusives={exclusives}
+                  location={packageData ? packageData.location : ""}
+                />
                 <div className="underline mt-5"></div>
-                <Itinerary/>
+                <Photos img={url} />
                 <div className="underline mt-5"></div>
-                <Faq/>
+                <Itinerary itinerary={itinerary} />
+                <div className="underline mt-5"></div>
+                <Faq />
               </div>
               <div
                 className="col-lg-4 m-15px-tb blog-aside"
