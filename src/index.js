@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 
 // all custom css 
-
+import './css/featured.css'
 import './css/home.css'
 import './css/main.css'
 import './css/style.css'
@@ -29,9 +29,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Suspense fallback={<div>Loading...</div>}>
     <Provider store={store}>
     <App />
     </Provider>
+    </Suspense>
     </BrowserRouter>
   </React.StrictMode>
 );

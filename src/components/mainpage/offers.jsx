@@ -16,7 +16,6 @@ const Offers = () => {
       dispatch(getEvents())
   },[dispatch])
   const {loading, events, errorMessage} = eventsListState;
-  console.log(events)
   const newEventsList = events.slice(0, 4);
   return (
     <div>
@@ -33,7 +32,7 @@ const Offers = () => {
                   </div>
                   <div className="pw_content">
                     <div className="pw_header">
-                      <Link to={`/admin/safari-packages/${id}`}>
+                      <Link to={`/kalbo/safari-packages/${id}`}>
                         <h6>{title}</h6>
                       </Link>
                       <small className="text-muted">

@@ -15,24 +15,24 @@ export default function ContactsForm() {
                         <div className="col-md-4">
                             <div className="form-wrap">
                                 <input className="form-input" id="contact-your-name-2" type="text" name="name" data-constraints="@Required" />
-                                <label className="form-label" for="contact-your-name-2">Your Name</label>
+                                <label className="form-labels" for="contact-your-name-2">Your Name</label>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="form-wrap">
                                 <input className="form-input" id="contact-email-2" type="email" name="email" data-constraints="@Email @Required" />
-                                <label className="form-label" for="contact-email-2">E-mail</label>
+                                <label className="form-labels" for="contact-email-2">E-mail</label>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="form-wrap">
                                 <input className="form-input" id="contact-phone-2" type="text" name="phone" data-constraints="@Numeric" />
-                                <label className="form-label" for="contact-phone-2">Phone</label>
+                                <label className="form-labels" for="contact-phone-2">Phone</label>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="form-wrap">
-                                <label className="form-label" for="contact-message-2">Message</label>
+                                <label className="form-labels" for="contact-message-2">Message</label>
                                 <textarea className="form-input textarea-lg" id="contact-message-2" name="message" data-constraints="@Required"></textarea>
                             </div>
                         </div>

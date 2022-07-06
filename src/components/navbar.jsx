@@ -65,7 +65,7 @@ const Navbar= () => {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/kalbo/safari-packages">
+                    <a className="dropdown-item" href="/kalbo/hire-ride">
                       Hire Ride
                     </a>
                   </li>
@@ -80,7 +80,7 @@ const Navbar= () => {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/kalbo/safari-packages">
+                    <a className="dropdown-item" href="/kalbo/safari-packages/beach-safaris">
                       Beach safaris
                     </a>
                   </li>

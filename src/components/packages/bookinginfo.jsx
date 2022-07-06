@@ -22,11 +22,9 @@ export default function BookingInfo(props) {
     dispatch(getEvents());
   }, [dispatch]);
   const { loading, events, errorMessage } = eventsListState;
-  console.log(loading, events, errorMessage);
   useEffect(() => {
     for (var i = 0; i < events.length; i++) {
       var post = events[i];
-      console.log(post);
       if (post.id === id) {
         setPostContent(post);
       }
@@ -36,7 +34,6 @@ export default function BookingInfo(props) {
     postContent;
 
   return (
-    <section className="section section-sm section-first bg-default text-md-left">
       <div className="container mt-0">
         <Crumbs title={title} />
         <div className="booking m-2">
@@ -139,6 +136,5 @@ export default function BookingInfo(props) {
           </div>
         </div>
       </div>
-    </section>
   );
 }

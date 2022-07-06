@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect , Suspense} from "react";
 import Breadcrumbs from "./crubs";
 import { useSelector, useDispatch } from 'react-redux'
 import { getEvents } from '../../redux/features/eventsfeature'
@@ -33,11 +33,13 @@ export default function Events() {
               <div className="col-md-3 col-sm-6 col-xs-12" key={id}>
                 <div className="boxs project_widget">
                   <div className="pw_img">
-                    <img className="img-responsive" src={url} alt="img" />
+                  <Suspense fallback={<div>Loading...</div>}>
+                  <img className="img-responsive" src={url} alt="img" />
+                  </Suspense>
                   </div>
                   <div className="pw_content">
                     <div className="pw_header">
-                      <Link to={`/admin/safari-packages/${id}`}>
+                      <Link to={`/kalbo/safari-packages/${id}`}>
                         <h6>{title}</h6>
                       </Link>
                       <small className="text-muted">

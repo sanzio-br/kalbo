@@ -18,14 +18,14 @@ function Blog() {
       <div className="container">
         <div className="row align-items-start">
           <div className="col-lg-8 m-15px-tb">
-            {blogs.map(({ title, postText, author, id, url }) => {
+            {blogs.map(({id, url, blog }) => {
               return (
                 <article className="article" id={`${id}`} data-aos="fade-up" key={id}>
                   <div className="article-img">
                     <img src={url} title="" alt="" />
                   </div>
                   <div className="article-title">
-                    <h3>{title}</h3>
+                    <h3>{blog ? blog.blogTitle : ""}</h3>
                     <div className="media">
                       <div className="avatar">
                         <img src={logo} title="" alt="" />
@@ -36,7 +36,7 @@ function Blog() {
                     </div>
                   </div>
                   <div className="article-content">
-                    <p>{postText}</p>
+                    <p>{blog ? blog.blogPost : ""}</p>
                   </div>
                 </article>
               )
@@ -49,13 +49,13 @@ function Blog() {
                 <h3>Latest Post</h3>
               </div>
               <div className="widget-body">
-                {blogs.map(({ title,id ,url}) => {
+                {blogs.map(({ blog, id ,url}) => {
                   return (
                     <div className="latest-post-aside media" key={id}>
                       <div className="lpa-left media-body">
                         <div className="lpa-title">
                           <Link to={`${id}`}>
-                            <h5>{title}</h5>
+                            <h5>{blog ? blog.blogTitle : ""}</h5>
                           </Link>
                         </div>
                         <div className="lpa-meta">

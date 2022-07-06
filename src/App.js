@@ -15,6 +15,7 @@ import Footer from "./components/footer";
 import React, { useEffect} from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { getEvents } from './redux/features/eventsfeature'
+import Beach from "./components/beachsafaris/beach";
 function App() {
   const dispatch = useDispatch();
   const eventsListState = useSelector((store)=>{
@@ -40,6 +41,7 @@ function App() {
           element={<BookingInfo />}
         />
         <Route exact path="/kalbo/contact-us" element={<Contactpage />} />
+        <Route exact path="/kalbo/safari-packages/beach-safaris" element={<Beach />} />
         <Route exact path="/kalbo/hire-ride" element={<Hire />} />
         <Route exact path="/kalbo/blogs" element={<BlogPage />} />
         <Route exact path="/kalbo/custom-safaris" element={<Custom />} />
