@@ -5,11 +5,11 @@ const Navbar= () => {
   return (
     <>
       <div className="topbar container">
-        <div className="left">
+        <div className="col-md-6 left">
           <a href="mailto:kalboadventures2019@gmail.com">kalboadventures2019@gmail.com</a> <span>|</span>
           <a href="tel:+254720126177">+254720126177</a>
         </div>
-        <div className="right">
+        <div className="col-md-6 right">
               <a href="/kalbo">FAQ</a> <span>|</span> 
               <a href="/kalbo/booking">Booking</a>
           </div>

@@ -10,23 +10,9 @@ import Custom from "./components/custom-safaris/custom";
 import BookingInfo from "./components/packages/bookinginfo";
 import Navbar from "./components/navbar";
 import Hire from './components/carhire/Hire'
-import AOS from 'aos'
 import Footer from "./components/footer";
-import React, { useEffect} from "react";
-import { useSelector, useDispatch } from 'react-redux'
-import { getEvents } from './redux/features/eventsfeature'
 import Beach from "./components/beachsafaris/beach";
 function App() {
-  const dispatch = useDispatch();
-  const eventsListState = useSelector((store)=>{
-      return store['events']
-  })
-  useEffect(()=>{
-      dispatch(getEvents())
-  },[dispatch])
-  const {events} = eventsListState;
-  const id = events.id;
-  AOS.init();
   return (
     <div className="App">
       <Navbar />
