@@ -1,8 +1,10 @@
 import Accordance from "./accordances";
+import BreadcrumbsBlogs from "./breadcrumbs";
 
 const About = () => {
     return (
-        <div className="about-page container">
+        <div className="about-page container mt-0">
+            <BreadcrumbsBlogs/>
             <h1 className="h-2 headers">About</h1>
             <div className="about">
                 <p className="mt-2">

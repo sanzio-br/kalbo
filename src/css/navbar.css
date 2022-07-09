@@ -26,6 +26,7 @@ nav{
   color: var(--red);
 }
 .topbar{
+  text-align: center;
   margin: 0 auto;
   background-color: var(--red);
   color: #ffffff;
