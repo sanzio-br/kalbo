@@ -25,7 +25,7 @@ const Booking = () => {
   console.log(userData);
   return (
     <div className="container">
-      <h1 className="h-2 headers">Fill in the form bellow to book a safari</h1>
+      <h1 className="h-2 headers">Fill in the form below to book a safari</h1>
       <form className="row g-3 text-left">
         <div className="col-md-6 form-group">
           <label className="form-label">First Name</label>
