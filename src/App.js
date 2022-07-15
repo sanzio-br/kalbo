@@ -17,20 +17,20 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route exact path="/kalbo" element={<Home />} />
-        <Route exact path="/kalbo/about" element={<About />} />
-        <Route exact path="/kalbo/booking" element={<Booking />} />
-        <Route exact path="/kalbo/safari-packages" element={<Events />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/booking" element={<Booking />} />
+        <Route exact path="/safari-packages" element={<Events />} />
         <Route
           exact
-          path="/kalbo/safari-packages/:id"
+          path="/safari-packages/:id"
           element={<BookingInfo />}
         />
-        <Route exact path="/kalbo/contact-us" element={<Contactpage />} />
-        <Route exact path="/kalbo/safari-packages/beach-safaris" element={<Beach />} />
-        <Route exact path="/kalbo/hire-ride" element={<Hire />} />
-        <Route exact path="/kalbo/blogs" element={<BlogPage />} />
-        <Route exact path="/kalbo/custom-safaris" element={<Custom />} />
+        <Route exact path="/contact-us" element={<Contactpage />} />
+        <Route exact path="/safari-packages/beach-safaris" element={<Beach />} />
+        <Route exact path="/hire-ride" element={<Hire />} />
+        <Route exact path="/blogs" element={<BlogPage />} />
+        <Route exact path="/custom-safaris" element={<Custom />} />
       </Routes>
       <Footer/>
     </div>

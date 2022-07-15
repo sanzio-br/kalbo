@@ -10,13 +10,13 @@ const Navbar= () => {
           <a href="tel:+254720126177">+254720126177</a>
         </div>
         <div className="col-md-6 right">
-              <a href="/kalbo">FAQ</a> <span>|</span> 
-              <a href="/kalbo/booking">Booking</a>
+              <a href="/">FAQ</a> <span>|</span> 
+              <a href="/booking">Booking</a>
           </div>
       </div>
       <nav className="navbar navbar-expand-lg container sticky-top mt-0">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/kalbo">
+          <a className="navbar-brand" href="/">
             <img
               src={logo}
               alt=""
@@ -42,20 +42,20 @@ const Navbar= () => {
                 <a
                   className="nav-link active"
                   aria-current="page"
-                  href="/kalbo"
+                  href="/"
                 >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/kalbo/about">
+                <a className="nav-link" href="/about">
                   About
                 </a>
               </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="/kalbo/safari-packages"
+                  href="/safari-packages"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -65,27 +65,27 @@ const Navbar= () => {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/kalbo/hire-ride">
+                    <a className="dropdown-item" href="/hire-ride">
                       Hire Ride
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/kalbo/safari-packages">
+                    <a className="dropdown-item" href="/safari-packages">
                       Team building
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/kalbo/safari-packages">
+                    <a className="dropdown-item" href="/safari-packages">
                       City excusion
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/kalbo/safari-packages/beach-safaris">
+                    <a className="dropdown-item" href="/safari-packages/beach-safaris">
                       Beach safaris
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/kalbo/safari-packages">
+                    <a className="dropdown-item" href="/safari-packages">
                       Hotel reservation
                     </a>
                   </li>
@@ -95,7 +95,7 @@ const Navbar= () => {
                 <a
                   className="nav-link active"
                   aria-current="page"
-                  href="/kalbo/custom-safaris"
+                  href="/custom-safaris"
                 >
                   Custom safaris
                 </a>
@@ -104,7 +104,7 @@ const Navbar= () => {
                 <a
                   className="nav-link active"
                   aria-current="page"
-                  href="/kalbo/blogs"
+                  href="/blogs"
                 >
                   Blogs
                 </a>
@@ -113,7 +113,7 @@ const Navbar= () => {
                 <a
                   className="nav-link active"
                   aria-current="page"
-                  href="/kalbo/booking"
+                  href="/booking"
                 >
                   Online Booking
                 </a>
@@ -122,7 +122,7 @@ const Navbar= () => {
                 <a
                   className="nav-link active"
                   aria-current="page"
-                  href="/kalbo/contact-us"
+                  href="/contact-us"
                 >
                   Contacts
                 </a>

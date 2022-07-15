@@ -70,14 +70,14 @@ export default function Footer() {
                                     </h6>
                                     <article className="post post-minimal-2">
                                         <p className="post-minimal-2-title">
-                                            <a href="/Blogs">
+                                            <a href="/blogs">
                                                 Your Personal Guide to 5 Best Places to Visit on Earth
                                             </a>
                                         </p>
                                     </article>
                                     <article className="post post-minimal-2">
                                         <p className="post-minimal-2-title">
-                                            <a href="/Blogs">
+                                            <a href="/blogs">
                                                 Top 10 Hotels: Rating by Kalbo adventures Experts
                                             </a>
                                         </p>
@@ -92,10 +92,10 @@ export default function Footer() {
                                         Quick links
                                     </h6>
                                     <ul className="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
-                                        <li><a href="/kalbo-main-app/About">About us</a></li>
-                                        <li><a href="/kalbo-main-app/Events">Our Tours</a></li>
-                                        <li><a href="/kalbo-main-app/Blogs">Blog</a></li>
-                                        <li><a href="/kalbo-main-app/Contacts">Contacts</a></li>
+                                        <li><a href="/about">About us</a></li>
+                                        <li><a href="/safari-packages">Our Tours</a></li>
+                                        <li><a href="/blogs">Blog</a></li>
+                                        <li><a href="/contact-us">Contacts</a></li>
                                     </ul>
                                     <div className="group-md group-middle justify-content-sm-start">
                                         <a className="button button-lg button-primary button-ujarak" href="/Contacts">

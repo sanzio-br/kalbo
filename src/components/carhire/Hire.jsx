@@ -20,7 +20,7 @@ export default function Hire() {
                 <li>28 seater Truck</li>
             </ul>
             <a className="button button-secondary button-pipaluk"
-                href="/kalbo/contact-us" data-aos="fade-up">
+                href="/contact-us" data-aos="fade-up">
                 Hire a ride
               </a>
           </div>

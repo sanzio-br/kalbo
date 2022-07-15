@@ -10,7 +10,7 @@ const Featured = () => {
   useEffect(() => {
     dispatch(getEvents());
   }, [dispatch]);
-  const { loading, events, errorMessage } = eventsListState;
+  const {events} = eventsListState;
   const newEventsList = events.slice(0, 4);
   return (
     <div className="featured">
@@ -22,7 +22,7 @@ const Featured = () => {
               <div className="col-md-3 col-sm-6 col-xs-12 graphicdesign photography">
                 <div className="gal-detail thumb">
                   <a
-                    href={`/kalbo/safari-packages/${id}`}
+                    href={`/safari-packages/${id}`}
                     className="image-popup"
                     title="Screenshot-5"
                   >
@@ -32,7 +32,7 @@ const Featured = () => {
                     {packageData ? packageData.destination : ""}
                   </h4>
                   <div className="ga-border"></div>
-                  <Link to={`/kalbo/safari-packages/${id}`}>
+                  <Link to={`/safari-packages/${id}`}>
                     <p className="text-muted text-center">
                       <small>{title}</small>
                     </p>

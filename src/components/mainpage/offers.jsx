@@ -15,7 +15,7 @@ const Offers = () => {
   useEffect(()=>{
       dispatch(getEvents())
   },[dispatch])
-  const {loading, events, errorMessage} = eventsListState;
+  const {events} = eventsListState;
   const newEventsList = events.slice(0, 4);
   return (
     <div>
@@ -32,7 +32,7 @@ const Offers = () => {
                   </div>
                   <div className="pw_content">
                     <div className="pw_header">
-                      <Link to={`/kalbo/safari-packages/${id}`}>
+                      <Link to={`/safari-packages/${id}`}>
                         <h6>{title}</h6>
                       </Link>
                       <small className="text-muted">
@@ -50,7 +50,7 @@ const Offers = () => {
                         <BsPeopleFill className="card-icon" />
                         {packageData ? packageData.people : ""}
                       </span>
-                      <Link to={`/kalbo/safari-packages/${id}`}>
+                      <Link to={`/safari-packages/${id}`}>
                         <Button id={id} />
                       </Link>
                     </div>

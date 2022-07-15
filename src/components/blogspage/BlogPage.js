@@ -59,7 +59,7 @@ function Blog() {
                           </Link>
                         </div>
                         <div className="lpa-meta">
-                          <a className="name" href="/kalbo-main-app">
+                          <a className="name" href="/">
                             Kalbo admin
                           </a>
                         </div>

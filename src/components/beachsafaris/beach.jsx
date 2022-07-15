@@ -40,7 +40,7 @@ const Beach = () => {
                 </div>
                 <div className="pw_content">
                   <div className="pw_header">
-                    <Link to={`/kalbo/safari-packages/${id}`}>
+                    <Link to={`/safari-packages/${id}`}>
                       <h6>{title}</h6>
                     </Link>
                     <small className="text-muted">
@@ -58,7 +58,7 @@ const Beach = () => {
                       <BsPeopleFill className="card-icon" />
                       {packageData ? packageData.people : ""}
                     </span>
-                    <Link to={`/kalbo/safari-packages/${id}`}>
+                    <Link to={`/safari-packages/${id}`}>
                       <Button id={id} />
                     </Link>
                   </div>

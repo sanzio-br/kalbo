@@ -22,9 +22,13 @@ const Testimonies = () => {
                   />
                 </div>
                 <div className="pw_meta">
-                    <p>
-                    wow! its was such an amazing experience to travel with kalbo adventures, the team is so fantastic, the price is quit affordable, I mean every cent you remove be sure of spending well.for every fan you require don't hesitate to contact  k albo adventures they won't fail you.
-                    </p>
+                  <p>
+                    wow! its was such an amazing experience to travel with kalbo
+                    adventures, the team is so fantastic, the price is quit
+                    affordable, I mean every cent you remove be sure of spending
+                    well.for every fan you require don't hesitate to contact k
+                    albo adventures they won't fail you.
+                  </p>
                   <small className="text-danger">Klary Samokoth</small>
                 </div>
               </div>
@@ -47,7 +51,10 @@ const Testimonies = () => {
                   />
                 </div>
                 <div className="pw_meta">
-                    <p>Kalbo is the best tour company. I absolutely love their services. I have enjoyed all my trips with kalbo.</p>
+                  <p>
+                    Kalbo is the best tour company. I absolutely love their
+                    services. I have enjoyed all my trips with kalbo.
+                  </p>
                   <small className="text-danger">Joseph G</small>
                 </div>
               </div>
@@ -70,7 +77,12 @@ const Testimonies = () => {
                   />
                 </div>
                 <div className="pw_meta">
-                    <p>Kalbo adventures is the best traveling company I would recommend to all my friends. The experience I had with you was superb. Thank you Kalbo adventures you the best! I'll keep on choosing you!</p>
+                  <p>
+                    Kalbo adventures is the best traveling company I would
+                    recommend to all my friends. The experience I had with you
+                    was superb. Thank you Kalbo adventures you the best! I'll
+                    keep on choosing you!
+                  </p>
                   <small className="text-danger">Elizabeth</small>
                 </div>
               </div>
@@ -93,9 +105,13 @@ const Testimonies = () => {
                   />
                 </div>
                 <div className="pw_meta">
-                    <p>
-                    I Loved how the tour guides were so warm,hospitable and very comforting to be around.also very energetic from the driver to the photographer and the tour guides were very amazing,I'll definitely go again with yuh to any other adventures.
-                    </p>
+                  <p>
+                    I Loved how the tour guides were so warm,hospitable and very
+                    comforting to be around.also very energetic from the driver
+                    to the photographer and the tour guides were very
+                    amazing,I'll definitely go again with yuh to any other
+                    adventures.
+                  </p>
                   <small className="text-danger">Zipporah</small>
                 </div>
               </div>
