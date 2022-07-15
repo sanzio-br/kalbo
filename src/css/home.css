@@ -79,7 +79,8 @@
 
 
 .book{
-    background-color: var(--red) !important;
+    /* background-color: var(--red) !important;  */
+    background-image: url(../images/pexels-asad-photo-maldives-1591373.jpg);
 }
 
 iframe{
