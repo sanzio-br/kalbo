@@ -5,7 +5,7 @@ import { getEvents } from '../../redux/features/eventsfeature'
 import Button from "./button";
 import {AiOutlineCalendar} from 'react-icons/ai'
 import {WiDaySunny} from 'react-icons/wi'
-import {BsPeopleFill} from 'react-icons/bs'
+import {BsPeopleFill, BsFillPersonFill} from 'react-icons/bs'
 // import { Link, Route, Routes } from "react-router-dom";
 const Offers = () => {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ const Offers = () => {
                   </div>
                   <div className="pw_content">
                     <div className="pw_header">
-                      <Link to={`/safari-packages/${id}`}>
+                      <Link to={`/packages/${id}`}>
                         <h6>{title}</h6>
                       </Link>
                       <small className="text-muted">
@@ -40,17 +40,33 @@ const Offers = () => {
                       </small>
                     </div>
                     <div className="pw_meta">
-                      <span>
-                        <AiOutlineCalendar className="card-icon" />
-                        {packageData ? `${packageData.startDate} to ${packageData.endDate}`: ""}
-                      </span>
+                    {packageData ? (
+                        packageData.startDate && packageData.endDate ? (
+                          <>
+                            <span>
+                              <AiOutlineCalendar className="card-icon" />
+                              {packageData
+                                ? `${packageData.startDate} to ${packageData.endDate}`
+                                : ""}
+                            </span>
+                          </>
+                        ) : (
+                          ""
+                        )
+                      ) : (
+                        ""
+                      )}
                       <span>
                         <WiDaySunny className="card-icon" />
-                        {packageData ? packageData.days : ""} 
-                        <BsPeopleFill className="card-icon" />
-                        {packageData ? packageData.people : ""}
+                        {packageData ? packageData.days : ""}
                       </span>
-                      <Link to={`/safari-packages/${id}`}>
+                      <span>
+                        <BsFillPersonFill className="card-icon" />
+                        {packageData ? packageData.minPeople : ""}
+                        <BsPeopleFill className="card-icon" />
+                        {packageData ? packageData.maxPeople : ""}
+                      </span>
+                      <Link to={`/packages/${id}`}>
                         <Button id={id} />
                       </Link>
                     </div>

@@ -65,28 +65,33 @@ const Navbar= () => {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/hire-ride">
-                      Hire Ride
+                    <a className="dropdown-item" href="/packages">
+                      All packages
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="/safari-packages">
-                      Team building
+                      safari-packages
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/safari-packages">
-                      City excusion
+                    <a className="dropdown-item" href="/international-packages">
+                      Internatinal packages
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/safari-packages/beach-safaris">
-                      Beach safaris
+                    <a className="dropdown-item" href="/domestic-packages">
+                      Domestic packages
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/safari-packages">
-                      Hotel reservation
+                    <a className="dropdown-item" href="/honeymoon-packages">
+                      Honeymoon packages
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/beach-packages">
+                      Beach packages
                     </a>
                   </li>
                 </ul>

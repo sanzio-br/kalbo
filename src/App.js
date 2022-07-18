@@ -9,9 +9,12 @@ import Home from "./components/mainpage/Home";
 import Custom from "./components/custom-safaris/custom";
 import BookingInfo from "./components/packages/bookinginfo";
 import Navbar from "./components/navbar";
-import Hire from './components/carhire/Hire'
 import Footer from "./components/footer";
 import Beach from "./components/beachsafaris/beach";
+import { Safari } from "./components/eventspage/packagetypes/Safari";
+import { International } from "./components/eventspage/packagetypes/International";
+import { Domestic } from "./components/eventspage/packagetypes/Domestic";
+import { HoneyMoon } from "./components/eventspage/packagetypes/HoneyMoon";
 function App() {
   return (
     <div className="App">
@@ -20,17 +23,20 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/booking" element={<Booking />} />
-        <Route exact path="/safari-packages" element={<Events />} />
+        <Route exact path="/packages" element={<Events />} />
         <Route
           exact
-          path="/safari-packages/:id"
+          path="/packages/:id"
           element={<BookingInfo />}
         />
         <Route exact path="/contact-us" element={<Contactpage />} />
-        <Route exact path="/safari-packages/beach-safaris" element={<Beach />} />
-        <Route exact path="/hire-ride" element={<Hire />} />
         <Route exact path="/blogs" element={<BlogPage />} />
         <Route exact path="/custom-safaris" element={<Custom />} />
+        <Route exact path='/safari-packages' element={<Safari/>}/>
+        <Route exact path='/international-packages' element={<International/>}/>
+        <Route exact path='/domestic-packages' element={<Domestic/>}/>
+        <Route exact path='/honeymoon-packages' element={<HoneyMoon/>}/>
+        <Route exact path='/beach-packages' element={<Beach/>}/>
       </Routes>
       <Footer/>
     </div>

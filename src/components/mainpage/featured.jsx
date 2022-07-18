@@ -22,7 +22,7 @@ const Featured = () => {
               <div className="col-md-3 col-sm-6 col-xs-12 graphicdesign photography">
                 <div className="gal-detail thumb">
                   <a
-                    href={`/safari-packages/${id}`}
+                    href={`/packages/${id}`}
                     className="image-popup"
                     title="Screenshot-5"
                   >
@@ -32,7 +32,7 @@ const Featured = () => {
                     {packageData ? packageData.destination : ""}
                   </h4>
                   <div className="ga-border"></div>
-                  <Link to={`/safari-packages/${id}`}>
+                  <Link to={`/packages/${id}`}>
                     <p className="text-muted text-center">
                       <small>{title}</small>
                     </p>

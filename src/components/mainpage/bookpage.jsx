@@ -20,7 +20,7 @@ export default function Bookpage() {
                 with destinations all over the world. Browse our website to find your dream tour!
               </p>
               <a className="button button-secondary button-pipaluk"
-                href="/safari-packages" data-aos="fade-up">
+                href="/packages" data-aos="fade-up">
                 Book a Tour Now
               </a>
             </div>
