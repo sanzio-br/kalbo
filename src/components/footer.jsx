@@ -120,7 +120,7 @@ export default function Footer() {
                                     <li className="s-icons"><Link to=""><AiFillPhone /></Link></li>
                                     <li className="s-icons"><Link to="/"><FiInstagram /></Link></li>
                                     <li className="s-icons"><Link to="/"><FaFacebookF /></Link></li>
-                                    <li className="s-icons"><Link to="/https://wa.me/+254720 126177"><IoLogoWhatsapp /></Link></li>
+                                    <li className="s-icons"><Link to="https://wa.me/+254782021167"><IoLogoWhatsapp /></Link></li>
                                 </ul>
                             </div>
                         </div>
