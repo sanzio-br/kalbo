@@ -18,8 +18,8 @@ export default function Contactinfo() {
                                     </a>
                                 </p>
                                 <p className="box-contacts-link">
-                                    <a href="tel:+254720 126177">
-                                        +254720 126177
+                                    <a href="https://wa.me/+254782021167">
+                                        +254782021167
                                     </a>
                                 </p>
                             </div>
