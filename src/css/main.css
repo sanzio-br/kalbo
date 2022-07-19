@@ -68,6 +68,12 @@ ul {
   width: fit-content;
   align-self: flex-end;
 }
+.bookbtn > span:nth-child(1){
+  margin-right: 1em;
+}
+.bookbtn > span:nth-child(2){
+  margin-right: .2em;
+}
 .breadcrumbs-custom{
   background-image: url(../images/IMG_0149.jpg);
 }
