@@ -76,8 +76,18 @@ export default function BookingInfo(props) {
                 </span>
               </div>
               <div className="details">
-                <span>Description</span>
-                <p>{packageData ? packageData.description : ""}</p>
+                {packageData ? (
+                  packageData.description ? (
+                    <>
+                      <span>Description</span>
+                      <p>{packageData ? packageData.description : ""}</p>
+                    </>
+                  ) : (
+                    ""
+                  )
+                ) : (
+                  ""
+                )}
                 <BookButton
                   currency={packageData ? packageData.currency : ""}
                   title={title}
