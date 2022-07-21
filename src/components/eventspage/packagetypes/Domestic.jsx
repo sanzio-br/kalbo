@@ -5,10 +5,9 @@ import {AiOutlineCalendar} from 'react-icons/ai'
 import {WiDaySunny} from 'react-icons/wi'
 import {BsPeopleFill} from 'react-icons/bs'
 import { Link } from "react-router-dom";
-import Button from "../../mainpage/button";
-import { Unavailable } from '../unavailable'
+import Button from "../../../components/button";
 export const Domestic = () => {
-  const [beach, setBeach] = useState([])
+  const [domestic, setDomestic] = useState([])
     const dispatch = useDispatch();
     const eventsListState = useSelector((store)=>{
         return store['events']
@@ -17,20 +16,18 @@ export const Domestic = () => {
         dispatch(getEvents())
     },[dispatch])
     const {events} = eventsListState;
-
-    const Selected = (events) => {
+    useEffect(()=>{
+      const Selected = (events) => {
         return events.packageData.packageType === "Domestic packages"
     }
-    useEffect(()=>{
-        setBeach(events.filter(Selected))
+        setDomestic(events.filter(Selected))
     },[])
   return (
     <div>
     <h1 className="h-2 headers">Domestic packages</h1>
     <div className="container">
       <div className="row clearfix">
-      {!beach && <Unavailable packageType={"Domestic packages"}/>}
-        {beach.map(
+        {domestic.map(
           ({ title, packageData, id, url}) => {
             return (
               <div className="col-md-3 col-sm-6 col-xs-12" key={id}>
@@ -42,7 +39,7 @@ export const Domestic = () => {
                 </div>
                 <div className="pw_content">
                   <div className="pw_header">
-                    <Link to={`/packages/${id}`}>
+                    <Link to={`/safari-packages/${id}`}>
                       <h6>{title}</h6>
                     </Link>
                     <small className="text-muted">
@@ -60,7 +57,7 @@ export const Domestic = () => {
                       <BsPeopleFill className="card-icon" />
                       {packageData ? packageData.people : ""}
                     </span>
-                    <Link to={`/packages/${id}`}>
+                    <Link to={`/safari-packages/${id}`}>
                       <Button id={id} />
                     </Link>
                   </div>

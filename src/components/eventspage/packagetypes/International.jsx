@@ -5,8 +5,7 @@ import {AiOutlineCalendar} from 'react-icons/ai'
 import {WiDaySunny} from 'react-icons/wi'
 import {BsPeopleFill} from 'react-icons/bs'
 import { Link } from "react-router-dom";
-import Button from "../../mainpage/button";
-import { Unavailable } from '../unavailable'
+import Button from "../../../components/button";
 export const International = () => {
   const [beach, setBeach] = useState([])
     const dispatch = useDispatch();
@@ -17,11 +16,10 @@ export const International = () => {
         dispatch(getEvents())
     },[dispatch])
     const {events} = eventsListState;
-
-    const Selected = (events) => {
+    useEffect(()=>{
+      const Selected = (events) => {
         return events.packageData.packageType === "International packages"
     }
-    useEffect(()=>{
         setBeach(events.filter(Selected))
     },[])
   return (
@@ -29,7 +27,6 @@ export const International = () => {
     <h1 className="h-2 headers">International packages</h1>
     <div className="container">
       <div className="row clearfix">
-      {!beach && <Unavailable packageType={"International packages"}/>}
         {beach.map(
           ({ title, packageData, id, url}) => {
             return (
@@ -42,7 +39,7 @@ export const International = () => {
                 </div>
                 <div className="pw_content">
                   <div className="pw_header">
-                    <Link to={`/packages/${id}`}>
+                    <Link to={`/safari-packages/${id}`}>
                       <h6>{title}</h6>
                     </Link>
                     <small className="text-muted">
@@ -60,7 +57,7 @@ export const International = () => {
                       <BsPeopleFill className="card-icon" />
                       {packageData ? packageData.people : ""}
                     </span>
-                    <Link to={`/packages/${id}`}>
+                    <Link to={`/safari-packages/${id}`}>
                       <Button id={id} />
                     </Link>
                   </div>
