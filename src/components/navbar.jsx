@@ -127,6 +127,15 @@ const Navbar= () => {
                 <a
                   className="nav-link active"
                   aria-current="page"
+                  href="/gallery"
+                >
+                  Gallery
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
                   href="/contact-us"
                 >
                   Contacts

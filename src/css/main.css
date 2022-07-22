@@ -77,3 +77,16 @@ ul {
 .breadcrumbs-custom{
   background-image: url(../images/IMG_0149.jpg);
 }
+.accordion-button >  h4{
+  font-size: clamp(1rem, 2.5vw, 1.3rem) !important;
+}
+.accordion-body >  p{
+  font-size: clamp(.8rem, 2.5vw, 1rem) !important;
+}
+.accordion-button:not(.collapsed){
+  color: var(--red);
+}
+.accordion-button:focus {
+  border-color: var(--red) !important;
+  box-shadow: 0 0 0 0.25rem rgba(75, 3, 3, 0.25) !important;
+}

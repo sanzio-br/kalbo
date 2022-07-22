@@ -40,7 +40,7 @@ export default function BookButton(props) {
         </Modal.Header>
         <Modal.Body>
           <div>
-            <form className="form" ref={form}>
+            <form className="form bookform" ref={form}>
               <p style={{ color: "var(--red)", fontSize: "1.2em" }}>
                 Booking for: {props.title} <br />
                 Destination: {props.destination} <br />

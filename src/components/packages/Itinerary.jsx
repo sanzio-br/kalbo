@@ -1,5 +1,3 @@
-import React from "react";
-
 const Itinerary = ({ itinerary }) => {
   return (
     <div className="text-start">
@@ -9,7 +7,7 @@ const Itinerary = ({ itinerary }) => {
           {itinerary
             ? itinerary.contentState.blocks.map((block) => {
                 return (
-                  <div>
+                  <div key={block.key}>
                     <div>
                       {block.inlineStyleRanges
                         ? block.inlineStyleRanges.map((inlineStyleRange) => {

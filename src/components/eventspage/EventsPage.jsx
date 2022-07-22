@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getEvents, Open, Close } from "../../redux/features/eventsfeature";
+import { getEvents} from "../../redux/features/eventsfeature";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { WiDaySunny } from "react-icons/wi";
 import { BsPeopleFill, BsFillPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import Button from "../../components/button";
-import { AiOutlineDelete } from "react-icons/ai";
-import { Delete } from "./delete";
-export default function Events({ isAuth }) {
+import Button from "../mainpage/button";
+export default function Events() {
   const dispatch = useDispatch();
   const eventsListState = useSelector((store) => {
     return store["events"];
@@ -16,13 +14,7 @@ export default function Events({ isAuth }) {
   useEffect(() => {
     dispatch(getEvents());
   }, [dispatch]);
-  const { events, modalShow } = eventsListState;
-  const modalOpen = () => {
-    dispatch(Open());
-  };
-  const modalClose = () => {
-    dispatch(Close());
-  };
+  const { events } = eventsListState;
   return (
     <section style={{ textAlign: "center" }} className="container mt-0">
       <h1 className="h-2 headers">All available packages</h1>
@@ -37,7 +29,7 @@ export default function Events({ isAuth }) {
                   </div>
                   <div className="pw_content">
                     <div className="pw_header">
-                      <Link to={`/safari-packages/${id}`}>
+                      <Link to={`/packages/${id}`}>
                         <h6>{title}</h6>
                       </Link>
                       <small className="text-muted">
@@ -71,24 +63,11 @@ export default function Events({ isAuth }) {
                         <BsPeopleFill className="card-icon" />
                         {packageData ? packageData.maxPeople : ""}
                       </span>
-                      <Link to={`/safari-packages/${id}`}>
+                      <Link to={`/packages/${id}`}>
                         <Button id={id} />
                       </Link>
                     </div>
                   </div>
-                  {isAuth && (
-                    <div className="delete">
-                      <button className="delete-btn" onClick={modalOpen}>
-                        <AiOutlineDelete />
-                      </button>
-                      <Delete
-                        show={modalShow}
-                        onHide={modalClose}
-                        id={id}
-                        title={title}
-                      />
-                    </div>
-                  )}
                 </div>
               </div>
             );
