@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getEvents } from "../../../redux/features/eventsfeature";
 import { AiOutlineCalendar } from "react-icons/ai";
@@ -7,7 +7,6 @@ import { BsPeopleFill, BsFillPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Button from "../../mainpage/button";
 export const Safari = () => {
-  const [beach, setBeach] = useState([]);
   const dispatch = useDispatch();
   const eventsListState = useSelector((store) => {
     return store["events"];
@@ -16,22 +15,15 @@ export const Safari = () => {
     dispatch(getEvents());
   }, [dispatch]);
   const { events } = eventsListState;
-  console.log(events);
-  useEffect(() => {
-    // const Selected = async (events) => {
-    //   return events.packageData.packageType === "Safari Packages";
-    // };
-    setBeach(events.filter((events)=>{
-      return events.packageData.packageType === "Safari Packages";
-    }));
-  }, []);
-  console.log("packages are : " + beach);
+  const Selected = events.filter((event) => {
+    return event.packageData.packageType === "Safari Packages"
+  })
   return (
     <div>
       <h1 className="h-2 headers">Safari packages</h1>
       <div className="container">
         <div className="row clearfix">
-          {beach.map(({ title, packageData, id, url }) => {
+          {Selected.map(({ title, packageData, id, url }) => {
             return (
               <div className="col-md-3 col-sm-6 col-xs-12" key={id}>
                 <div className="boxs project_widget">
@@ -40,7 +32,7 @@ export const Safari = () => {
                   </div>
                   <div className="pw_content">
                     <div className="pw_header">
-                      <Link to={`/packages/${title.replace(/\s+/g, '-')}`}>
+                      <Link to={`/packages/${title.replace(/\s+/g, "-")}`}>
                         <h6>{title}</h6>
                       </Link>
                       <small className="text-muted">
@@ -74,7 +66,7 @@ export const Safari = () => {
                         <BsPeopleFill className="card-icon" />
                         {packageData ? packageData.maxPeople : ""}
                       </span>
-                      <Link to={`/packages/${title.replace(/\s+/g, '-')}`}>
+                      <Link to={`/packages/${title.replace(/\s+/g, "-")}`}>
                         <Button id={id} />
                       </Link>
                     </div>

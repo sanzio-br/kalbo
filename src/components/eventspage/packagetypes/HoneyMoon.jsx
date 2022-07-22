@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getEvents } from "../../../redux/features/eventsfeature";
 import { AiOutlineCalendar } from "react-icons/ai";
@@ -7,7 +7,6 @@ import { BsPeopleFill ,BsFillPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Button from "../../mainpage/button";
 export const HoneyMoon = () => {
-  const [honeymoon, setHoneymoon] = useState([]);
   const dispatch = useDispatch();
   const eventsListState = useSelector((store) => {
     return store["events"];
@@ -16,19 +15,15 @@ export const HoneyMoon = () => {
     dispatch(getEvents());
   }, [dispatch]);
   const { events } = eventsListState;
-
-  useEffect(() => {
-    const Selected = (events) => {
-      return events.packageData.packageType === "Honey moon packages";
-    };
-    setHoneymoon(events.filter(Selected));
-  }, []);
+  const Selected = events.filter((event) => {
+    return event.packageData.packageType === "Honey moon packages"
+  })
   return (
     <div>
       <h1 className="h-2 headers">Honeymoon packages</h1>
       <div className="container">
         <div className="row clearfix">
-          {honeymoon.map(({ title, packageData, id, url }) => {
+          {Selected.map(({ title, packageData, id, url }) => {
             return (
               <div className="col-md-3 col-sm-6 col-xs-12" key={id}>
                 <div className="boxs project_widget">

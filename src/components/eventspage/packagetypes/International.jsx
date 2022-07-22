@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getEvents } from '../../../redux/features/eventsfeature'
 import {AiOutlineCalendar} from 'react-icons/ai'
@@ -7,7 +7,6 @@ import {BsPeopleFill, BsFillPersonFill} from 'react-icons/bs'
 import { Link } from "react-router-dom";
 import Button from "../../mainpage/button";
 export const International = () => {
-  const [beach, setBeach] = useState([])
     const dispatch = useDispatch();
     const eventsListState = useSelector((store)=>{
         return store['events']
@@ -16,18 +15,15 @@ export const International = () => {
         dispatch(getEvents())
     },[dispatch])
     const {events} = eventsListState;
-    useEffect(()=>{
-      const Selected = (events) => {
-        return events.packageData.packageType === "International packages"
-    }
-        setBeach(events.filter(Selected))
-    },[])
+    const Selected = events.filter((event) => {
+      return event.packageData.packageType === "International package"
+    })
   return (
     <div>
     <h1 className="h-2 headers">International packages</h1>
     <div className="container">
       <div className="row clearfix">
-        {beach.map(
+        {Selected.map(
           ({ title, packageData, id, url}) => {
             return (
               <div className="col-md-3 col-sm-6 col-xs-12" key={id}>
