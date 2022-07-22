@@ -32,7 +32,7 @@ const Offers = () => {
                   </div>
                   <div className="pw_content">
                     <div className="pw_header">
-                      <Link to={`/packages/${id}`}>
+                      <Link to={`/packages/${title.replace(/\s+/g, '-')}`}>
                         <h6>{title}</h6>
                       </Link>
                       <small className="text-muted">
@@ -40,7 +40,7 @@ const Offers = () => {
                       </small>
                     </div>
                     <div className="pw_meta">
-                    {packageData ? (
+                      {packageData ? (
                         packageData.startDate && packageData.endDate ? (
                           <>
                             <span>
@@ -66,7 +66,7 @@ const Offers = () => {
                         <BsPeopleFill className="card-icon" />
                         {packageData ? packageData.maxPeople : ""}
                       </span>
-                      <Link to={`/packages/${id}`}>
+                      <Link to={`/packages/${title.replace(/\s+/g, '-')}`}>
                         <Button id={id} />
                       </Link>
                     </div>

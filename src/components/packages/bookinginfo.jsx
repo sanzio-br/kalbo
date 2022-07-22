@@ -25,7 +25,7 @@ export default function BookingInfo(props) {
   useEffect(() => {
     for (var i = 0; i < events.length; i++) {
       var post = events[i];
-      if (post.id === id) {
+      if (post.title.replace(/\s+/g, '-') === id) {
         setPostContent(post);
       }
     }

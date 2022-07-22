@@ -38,7 +38,7 @@ export const Building = () => {
                   </div>
                   <div className="pw_content">
                     <div className="pw_header">
-                      <Link to={`/packages/${id}`}>
+                      <Link to={`/packages/${title.replace(/\s+/g, '-')}`}>
                         <h6>{title}</h6>
                       </Link>
                       <small className="text-muted">
@@ -72,7 +72,7 @@ export const Building = () => {
                         <BsPeopleFill className="card-icon" />
                         {packageData ? packageData.maxPeople : ""}
                       </span>
-                      <Link to={`/packages/${id}`}>
+                      <Link to={`/packages/${title.replace(/\s+/g, '-')}`}>
                         <Button id={id} />
                       </Link>
                     </div>
