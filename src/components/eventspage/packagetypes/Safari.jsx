@@ -20,7 +20,7 @@ export const Safari = () => {
   })
   return (
     <div>
-      <h1 className="h-2 headers">Safari packages</h1>
+      <h1 className="h-2 headers">Wildlife pack safari-packages</h1>
       <div className="container">
         <div className="row clearfix">
           {Selected.map(({ title, packageData, id, url }) => {

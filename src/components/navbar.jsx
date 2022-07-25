@@ -71,12 +71,12 @@ const Navbar= () => {
                   </li>
                   <li>
                     <a className="dropdown-item" href="/safari-packages">
-                      safari-packages
+                      Wildlife pack safari-packages
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="/international-packages">
-                      Internatinal packages
+                      International packages
                     </a>
                   </li>
                   <li>

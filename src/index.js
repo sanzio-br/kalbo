@@ -25,6 +25,7 @@ import './css/foot.css'
 import './css/books.css'
 import './css/package.css'
 import './css/gallery.css'
+import './css/loader.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
