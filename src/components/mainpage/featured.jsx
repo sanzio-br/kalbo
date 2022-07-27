@@ -19,7 +19,7 @@ const Featured = () => {
         <div className="row clearfix">
           {newEventsList.map(({ url, title, packageData, id }) => {
             return (
-              <div className="col-md-3 col-sm-6 col-xs-12 graphicdesign photography">
+              <div key={id} className="col-md-3 col-sm-6 col-xs-12 graphicdesign photography">
                 <div className="gal-detail thumb">
                   <a
                     href={`/packages/${title.replace(/\s+/g, '-')}`}

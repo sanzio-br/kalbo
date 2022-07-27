@@ -1,10 +1,23 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Textarea from "../Textarea";
+import emailjs from '@emailjs/browser';
 const Booking = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   const [phone, setPhone] = useState(null);
   const [date, setDate] = useState(new Date());
   let [userData, setUserData] = useState({
@@ -22,7 +35,6 @@ const Booking = () => {
     const value = event.target.value;
     setUserData({ ...userData, [event.target.name]: value });
   };
-  console.log(userData);
   return (
     <div className="container">
       <h1 className="h-2 headers">Fill in the form below to book a safari</h1>

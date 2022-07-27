@@ -1,4 +1,4 @@
 .about > p{
     text-align: left;
-    font-size: 1.2em;
+    font-size: clamp(.9rem, 2.5vw, 1.1rem) !important;
 }
