@@ -20,10 +20,10 @@ export const Safari = () => {
   })
   return (
     <div>
-      <h1 className="h-2 headers">Wildlife pack safari-packages</h1>
+      <h1 className="h-2 headers">Wildlife park safari-packages</h1>
       <div className="container">
         <div className="row clearfix">
-          {Selected.map(({ title, packageData, id, url }) => {
+          {Selected && Selected.map(({ title, packageData, id, url }) => {
             return (
               <div className="col-md-3 col-sm-6 col-xs-12" key={id}>
                 <div className="boxs project_widget">

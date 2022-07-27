@@ -16,6 +16,7 @@ import { International } from "./components/eventspage/packagetypes/Internationa
 import { Domestic } from "./components/eventspage/packagetypes/Domestic";
 import { HoneyMoon } from "./components/eventspage/packagetypes/HoneyMoon";
 import { Gallery } from "./components/Gallery/Gallery";
+import { Building } from "./components/eventspage/packagetypes/Building";
 function App() {
   return (
     <div className="App">
@@ -39,6 +40,7 @@ function App() {
         <Route exact path='/honeymoon-packages' element={<HoneyMoon/>}/>
         <Route exact path='/beach-packages' element={<Beach/>}/>
         <Route exact path='/gallery' element={<Gallery/>}/>
+        <Route exact path='/team-building-packages' element={<Building/>}/>
       </Routes>
       <Footer/>
     </div>

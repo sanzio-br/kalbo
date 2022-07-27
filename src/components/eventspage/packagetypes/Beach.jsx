@@ -23,7 +23,7 @@ export const Beach = () => {
     <h1 className="h-2 headers">Beach packages</h1>
     <div className="container">
       <div className="row clearfix">
-        {Selected.map(
+        {Selected && Selected.map(
           ({ title, packageData, id, url}) => {
             return (
               <div className="col-md-3 col-sm-6 col-xs-12" key={id}>
@@ -77,6 +77,7 @@ export const Beach = () => {
             );
           }
         )}
+        {Selected.length < 0 && <div>sorry beach packages are currently unavailable</div>}
       </div>
     </div>
   </div>

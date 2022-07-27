@@ -1,22 +1,26 @@
 import { social } from "./data";
 import logo from "../images/logo.PNG";
 import { FaBars } from "react-icons/fa";
-const Navbar= () => {
+import { Link } from "react-router-dom";
+const Navbar = () => {
   return (
     <>
       <div className="topbar container">
         <div className="col-md-6 left">
-          <a href="mailto:kalboadventures2019@gmail.com">kalboadventures2019@gmail.com</a> <span>|</span>
-          <a href="tel:+254720126177">+254720126177</a>
+          <Link to="mailto:kalboadventures2019@gmail.com">
+            kalboadventures2019@gmail.com
+          </Link>{" "}
+          <span>|</span>
+          <Link to="tel:+254720126177">+254720126177</Link>
         </div>
         <div className="col-md-6 right">
-              <a href="/">FAQ</a> <span>|</span> 
-              <a href="/booking">Booking</a>
-          </div>
+          <Link to="/">FAQ</Link> <span>|</span>
+          <Link to="/booking">Booking</Link>
+        </div>
       </div>
       <nav className="navbar navbar-expand-lg container sticky-top mt-0">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             <img
               src={logo}
               alt=""
@@ -24,7 +28,7 @@ const Navbar= () => {
               height="40"
               className="d-inline-block align-text-top"
             />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -34,120 +38,87 @@ const Navbar= () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <FaBars/>
+            <FaBars />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="/"
-                >
-                  Home
-                </a>
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
-                  About
-                </a>
+              <Link className="nav-link active" aria-current="page" to="/about">About</Link>
               </li>
               <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/safari-packages"
+                <Link className="nav-link dropdown-toggle"
+                  to="packages"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Packages
-                </a>
+                  aria-expanded="false">Packages</Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/packages">
+                    <Link className="dropdown-item" to="/packages">
                       All packages
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/safari-packages">
-                      Wildlife pack safari-packages
-                    </a>
+                    <Link className="dropdown-item" to="/safari-packages">
+                      Wildlife-park safari-packages
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/international-packages">
+                    <Link
+                      className="dropdown-item"
+                      to="/team-building-packages"
+                    >
+                      Team-building-packages
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/international-packages"
+                    >
                       International packages
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/domestic-packages">
+                    <Link className="dropdown-item" to="/domestic-packages">
                       Domestic packages
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/honeymoon-packages">
+                    <Link className="dropdown-item" to="/honeymoon-packages">
                       Honeymoon packages
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/beach-packages">
+                    <Link className="dropdown-item" to="/beach-packages">
                       Beach packages
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="/custom-safaris"
-                >
-                  Custom safaris
-                </a>
+              <Link className="nav-link active" aria-current="page" to="/custom-safaris">Custom safaris</Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="/blogs"
-                >
-                  Blogs
-                </a>
+              <Link className="nav-link active" aria-current="page" to="/blogs">Blogs</Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="/booking"
-                >
-                  Online Booking
-                </a>
+              <Link className="nav-link active" aria-current="page" to="/booking">Online Booking</Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="/gallery"
-                >
-                  Gallery
-                </a>
+              <Link className="nav-link active" aria-current="page" to="/gallery">Gallery</Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="/contact-us"
-                >
-                  Contacts
-                </a>
+              <Link className="nav-link active" aria-current="page" to="/contact-us">Contacts</Link>
               </li>
             </ul>
             <div className="d-flex icons">
               {social.map(({ id, url, icon }) => {
                 return (
-                  <a key={id} href={url}>
-                    {icon}
-                  </a>
+                  <Link key={id} to={url}>{icon}</Link>
                 );
               })}
             </div>
