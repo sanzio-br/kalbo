@@ -5,7 +5,8 @@ const Itinerary = ({ itinerary }) => {
       <div className="day-details">
         <div>
           {itinerary
-            ? itinerary.contentState.blocks.map((block) => {
+            ? itinerary.contentState ? 
+            itinerary.contentState.blocks.map((block) => {
                 return (
                   <div key={block.key}>
                     <div>
@@ -31,7 +32,7 @@ const Itinerary = ({ itinerary }) => {
                     )}
                   </div>
                 );
-              })
+              }) : <div  dangerouslySetInnerHTML={{__html: itinerary}} />
             : ""}
         </div>
       </div>
