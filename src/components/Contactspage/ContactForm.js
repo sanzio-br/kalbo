@@ -26,6 +26,7 @@ export default function ContactsForm() {
       .then(
         (result) => {
           console.log(result.text);
+          alert("sent successfuly")
         },
         (error) => {
           console.log(error.text);

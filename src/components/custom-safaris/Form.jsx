@@ -27,6 +27,7 @@ const CustomForm = () => {
       .then(
         (result) => {
           console.log(result.text);
+          alert("sent successfully")
         },
         (error) => {
           console.log(error.text);
