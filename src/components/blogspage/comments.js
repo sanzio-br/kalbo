@@ -19,7 +19,7 @@ function PostComment() {
   return (
     <div className="contact-form article-comment" data-aos="fade-up">
     <h4>Leave a Reply</h4>
-    <form id="contact-form" method="POST">
+    <form id="contact-form">
       <div className="row">
         <div className="col-md-6">
           <div className="form-group">
