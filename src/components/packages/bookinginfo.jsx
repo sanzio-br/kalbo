@@ -25,7 +25,7 @@ export default function BookingInfo(props) {
   useEffect(() => {
     for (var i = 0; i < events.length; i++) {
       var post = events[i];
-      if (post.title.replace(/\s+/g, '-') === id) {
+      if (post.title.replace(/\s+/g, "-") === id) {
         setPostContent(post);
       }
     }
@@ -111,8 +111,12 @@ export default function BookingInfo(props) {
               />
               <div className="underline mt-5"></div>
               <Photos img={url} />
-              <div className="underline mt-5"></div>
-              <Itinerary itinerary={itinerary} />
+              {itinerary && (
+                <>
+                  <div className="underline mt-5"></div>
+                  <Itinerary itinerary={itinerary} />{" "}
+                </>
+              )}
               <div className="underline mt-5"></div>
               <Faq />
             </div>
